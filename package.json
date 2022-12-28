@@ -1,7 +1,7 @@
 {
   "name": "@jpb99/otp-input-vue",
   "description": "fully customizable opt input for web apps, compatible with Vue 2.x",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "author": {
     "name": "Jay Bharadia",
