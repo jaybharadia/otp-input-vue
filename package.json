@@ -1,14 +1,14 @@
 {
-  "name": "otp-input-vue",
+  "name": "@jaybharadia/otp-input-vue",
   "description": "fully customizable opt input for web apps, compatible with Vue 2.x",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "author": {
-    "name": "Shahriar Eshraghi",
-    "email": "shahriareshraghi@yahoo.com"
+    "name": "Jay Bharadia",
+    "email": "jay.p.bharadia@gmail.com"
   },
-  "repository": "https://github.com/novaday-co/otp-input-vue",
-  "bugs": "https://github.com/novaday-co/otp-input-vue/issues",
+  "repository": "https://github.com/jaybharadia/otp-input-vue",
+  "bugs": "https://github.com/jaybharadia/otp-input-vue/issues",
   "keywords": [
     "vuejs",
     "vue",

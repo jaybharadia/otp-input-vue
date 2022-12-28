@@ -10,16 +10,16 @@ OTP-INPUT
 Fully customizable OTP input for web apps, compatible with Vue 2.x
 </h4>
 <p  align="center">
-<a  href="https://github.com/novaday-co/otp-input-vue/stargazers">
+<a  href="https://github.com/jaybharadia/otp-input-vue/stargazers">
 <img  src="https://img.shields.io/github/stars/novaday-co/otp-input-vue" alt="stars">
 </a>
-<a  href="https://github.com/novaday-co/otp-input-vue/blob/master/LICENSE">
+<a  href="https://github.com/jaybharadia/otp-input-vue/blob/master/LICENSE">
 <img  src="https://img.shields.io/github/license/novaday-co/otp-input-vue" alt="license">
 </a>
-<a  href="https://github.com/novaday-co/otp-input-vue/network">
+<a  href="https://github.com/jaybharadia/otp-input-vue/network">
 <img  src="https://img.shields.io/github/forks/novaday-co/otp-input-vue" alt="forks">
 </a>
-<a  href="https://github.com/novaday-co/otp-input-vue/issues">
+<a  href="https://github.com/jaybharadia/otp-input-vue/issues">
 <img  src="https://img.shields.io/github/issues/novaday-co/otp-input-vue" alt="issues">
 </a>
 </p>

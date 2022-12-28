@@ -25,7 +25,7 @@ this package is an open-source project and we love to receive contributions from
  Responsibilities
 > * Ensure cross-platform compatibility for every change that's accepted. Windows, Mac, Debian & Ubuntu Linux.
 > * Ensure that code that goes into core meets all requirements in this checklist:
-> https://github.com/novaday-co/otp-input-vue#key-features
+> https://github.com/jaybharadia/otp-input-vue#key-features
 > * Create issues for any major changes and enhancements that you wish to make. Discuss things transparently and get community feedback.
 > * Don't add any classes to the codebase unless absolutely needed. Err on the side of using functions.
 > * Keep feature versions as small as possible, preferably one new feature per version.
@@ -34,7 +34,7 @@ this package is an open-source project and we love to receive contributions from
 
 # Your First Contribution
 
-Unsure where to begin contributing to Package? You can start by looking through these [Key features](https://github.com/novaday-co/otp-input-vue#key-features) and help-wanted issues:
+Unsure where to begin contributing to Package? You can start by looking through these [Key features](https://github.com/jaybharadia/otp-input-vue#key-features) and help-wanted issues:
  Beginner issues - issues which should only require a few lines of code, and a test or two.
  Help wanted issues - issues which should be a bit more involved than beginner issues.
 Both issue lists are sorted by total number of comments. While not perfect, number of comments is a reasonable proxy for impact a given change will have.
