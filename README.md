@@ -6,6 +6,8 @@
 OTP-INPUT
 <br>
 </h1>
+
+<h3 align="center">This repository is a fork from this <a href="https://github.com/novaday-co/otp-input-vue" target="_blank">repository</a></h3>
 <h4  align="center">
 Fully customizable OTP input for web apps, compatible with Vue 2.x
 </h4>
@@ -57,6 +59,8 @@ alt="otp-input.gif">
  - [x] Direction of inputs - **RTL** / **LTR** 
 
  - [x] Dynamic Type - **Number** and **Text**
+
+ - [x] Reset Otp State
  
  - [x] Dynamic **Number of inputs**
 
@@ -85,7 +89,7 @@ alt="otp-input.gif">
 To install the latest stable version:
   
 ```bash
-npm i otp-input-vue2
+npm i @jaybharadia/otp-input-vue
 ```
 
 <h4> Basic Example :</h4>
@@ -106,7 +110,7 @@ just import to your component :
 	</template>
 
 	<script>
-	import  OtpInput  from  "otp-input-vue2";
+	import  OtpInput  from  "@jaybharadia/otp-input-vue";
 
 	export default {
 	name:"yourComponent",
@@ -295,6 +299,24 @@ Expected output :
 </table>
 
 <br/>
+
+### Instance Methods ( $vueOtpInput )
+<table>
+<tbody>
+  <tr>
+    <td>Name</td>
+    <td>Arguments</td>
+    <td>Return value</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td>resetOtp</td>
+    <td> - </td>
+    <td> - </td>
+    <td> To Reset the otp value. ( Available through global prototype $vueOtpInput )</td>
+  </tr>
+</tbody>
+</table>
   
 ## Styling
 To customize the appearance of the inputs, we can pass our classes to the component as props:
