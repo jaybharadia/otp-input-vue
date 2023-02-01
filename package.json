@@ -1,7 +1,7 @@
 {
   "name": "otp-input-vue",
   "description": "fully customizable opt input for web apps, compatible with Vue 2.x",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "author": {
     "name": "Shahriar Eshraghi",
@@ -39,8 +39,10 @@
     "@vue/eslint-config-airbnb": "^6.0.0",
     "eslint": "^8.21.0",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^9.3.0",
     "vue-template-compiler": "^2.6.11"
+  },
+  "peerDependencies": {
+    "eslint-plugin-vue": "^9.9.0"
   },
   "eslintConfig": {
     "root": true,
