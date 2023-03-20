@@ -1,7 +1,7 @@
 {
   "name": "@jaybharadia/otp-input-vue",
   "description": "fully customizable opt input for web apps, compatible with Vue 2.x",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": false,
   "author": {
     "name": "Jay Bharadia",
@@ -25,7 +25,7 @@
     "build-library": "vue-cli-service build --target lib --name vue-otp-input ./src/install.js",
     "lint": "vue-cli-service lint"
   },
-  "main": ".dist/vue-otp-input.common.js",
+  "main": "./dist/vue-otp-input.common.js",
   "dependencies": {
     "@babel/eslint-parser": "^7.18.9",
     "core-js": "^3.6.5",

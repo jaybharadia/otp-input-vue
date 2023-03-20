@@ -1,4 +1,3 @@
-
 <h1  align="center">
 <br>
 <img src="https://i.ibb.co/qDR8VZv/vue-logo.png" alt="vue-logo">
@@ -27,7 +26,6 @@ Fully customizable OTP input for web apps, compatible with Vue 2.x
 </p>
 
 <br/>
-  
 
 <p  align="center">
 <a  href="#key-features">Key Features</a> •
@@ -48,103 +46,89 @@ alt="otp-input.gif">
 
 <br/>
 
-##  Key Features
-
-  
-
-- [x] Dynamic display modes - **Group** and **Separate** 
-
- - [x] Fully customizable style - **Input** , **wrapper** , **Active Input**, **Errors**
-
- - [x] Direction of inputs - **RTL** / **LTR** 
-
- - [x] Dynamic Type - **Number** and **Text**
-
- - [x] Reset Otp State
- 
- - [x] Dynamic **Number of inputs**
-
- - [x] Your desired character as input **placeholder**
-
- - [x] Controllable **gap** between inputs
-
- - [x] **Disabled** inputs
-
- - [x] **Error handling** - with customizable text
-
- - [x] **Auto Focus** on inputs
- 
- - [x] **Password** input type
- 
- - [ ]  **web-otp** - auto fill input from sms  *(Coming soon ... )*
- 
- - [ ]  **Vue 3.x** - compatible with vue 3.x *(Coming soon ... )*
-  <br/>
-  <br/>
-  
-##  Installation
+## Installation
 
 <br/>
 
+---
+
+## How to use
+
 To install the latest stable version:
-  
+
 ```bash
 npm i @jaybharadia/otp-input-vue
 ```
 
+- Import plugin
+
+```js
+import OtpInput from "@jaybharadia/otp-input-vue";
+```
+
+- Use plugin
+
+```js
+import Vue from "vue";
+Vue.use(OtpInput);
+```
+
+- Import css
+
+```js
+import "@jaybharadia/otp-input-vue/dist/vue-otp-input.css";
+```
+
+---
+
 <h4> Basic Example :</h4>
   <br/>
-just import to your component : 
+just import to your component :
 
-``` html
-	<template>
-		<div>
-			<otp-input
-			:isValid="isCodeValid"
-			@on-complete="onCompleteHandler"
-			@on-changed="onChangedHandler"
-			@on-paste="onPasteHandler">
-				<template #errorMessage> There is an error </template>
-			</otp-input>
-		</div>
-	</template>
+```html
+<template>
+  <div>
+    <otp-input
+      :isValid="isCodeValid"
+      @on-complete="onCompleteHandler"
+      @on-changed="onChangedHandler"
+      @on-paste="onPasteHandler"
+    >
+      <template #errorMessage> There is an error </template>
+    </otp-input>
+  </div>
+</template>
 
-	<script>
-	import  OtpInput  from  "@jaybharadia/otp-input-vue";
+<script>
+  export default {
+    name: "yourComponent",
+    data() {
+      return {
+        isCodeValid: true,
+      };
+    },
+    methods: {
+      onCompleteHandler(code) {
+        console.log("code completed", code);
+        this.isCodeValid = false;
+      },
 
-	export default {
-	name:"yourComponent",
-	components:{
-		OtpInput,
-	},
-	data(){
-		return {
-			isCodeValid: true,
-		};
-	},
-	methods: {
-		onCompleteHandler(code){
-		console.log("code completed",  code);
-		this.isCodeValid = false;
-		},
+      onChangedHandler(lastEnteredCode) {
+        console.log("code changed", lastEnteredCode);
+        this.isCodeValid = true;
+      },
 
-		onChangedHandler(lastEnteredCode){
-		console.log("code changed",  lastEnteredCode);
-		this.isCodeValid = true;
-		},
-
-		onPasteHandler(code){
-		console.log("code pasted",  code);
-		},
-	},
-
-	};
-
-	</script>
+      onPasteHandler(code) {
+        console.log("code pasted", code);
+      },
+    },
+  };
+</script>
 ```
+
 <br/>
 
-Expected output : 
+Expected output :
 
 <br/>
 
@@ -152,7 +136,39 @@ Expected output :
 <img src="https://i.ibb.co/BgR6Yvn/otp-input-error.gif" alt="otp-input-error" border="0">
 </p>
 
+## Key Features
 
+- Reset OTP State ( Additional Feature in this package )
+
+- [x] Dynamic display modes - **Group** and **Separate**
+
+- [x] Fully customizable style - **Input** , **wrapper** , **Active Input**, **Errors**
+
+- [x] Direction of inputs - **RTL** / **LTR**
+
+- [x] Dynamic Type - **Number** and **Text**
+
+- [x] Reset Otp State
+
+- [x] Dynamic **Number of inputs**
+
+- [x] Your desired character as input **placeholder**
+
+- [x] Controllable **gap** between inputs
+
+- [x] **Disabled** inputs
+
+- [x] **Error handling** - with customizable text
+
+- [x] **Auto Focus** on inputs
+
+- [x] **Password** input type
+
+- [ ] **web-otp** - auto fill input from sms _(Coming soon ... )_
+
+- [ ] **Vue 3.x** - compatible with vue 3.x _(Coming soon ... )_
+      <br/>
+      <br/>
 
 ## Props
 
@@ -269,13 +285,12 @@ Expected output :
 </table>
 <br/>
 
->  **Note**
+> **Note**
 > Don't Panic! 😁 There is a guide to how use class props and style inputs as you wish, [see this guide](#styling).
 
 <br/>
 
 ## Events
-
 
 <table>
 <tbody>
@@ -301,6 +316,7 @@ Expected output :
 <br/>
 
 ### Instance Methods ( $vueOtpInput )
+
 <table>
 <tbody>
   <tr>
@@ -321,21 +337,24 @@ Expected output :
 ## Styling
 To customize the appearance of the inputs, we can pass our classes to the component as props:
 
-First we should know how to pass class to otp component and use it . there is several approach, we focus on **scoped CSS** with *deep selector* (you can do yours😉) :
+First we should know how to pass class to otp component and use it . there is several approach, we focus on **scoped CSS** with _deep selector_ (you can do yours😉) :
 
 <h4>Separate Mode :</h4>
 
 template :
-``` html
+
+```html
 <template>
- <otp-input
-	separateWrapperClass="separate-wrapper-class"
-	separateInputClass="separate-input-class"
- />
+  <otp-input
+    separateWrapperClass="separate-wrapper-class"
+    separateInputClass="separate-input-class"
+  />
 </template>
 ```
+
 css :
-``` CSS
+
+```CSS
 <style scoped>
  .vue-otp-input  >>>  .separate-input-class {
 	text-align: center;
@@ -353,6 +372,7 @@ css :
 }
 </style>
 ```
+
 output:
 
 <img src="https://i.ibb.co/wYpSff2/Screenshot-2022-08-12-181410.jpg" alt="Screenshot-2022-08-12-181410" border="0">
@@ -362,19 +382,19 @@ output:
 
 template :
 
-``` html
+```html
 <template>
- <otp-input
-	mode="group"
-	groupWrapperClass="group-wrapper-class"
-	groupInputClass="group-input-class"
-/>
+  <otp-input
+    mode="group"
+    groupWrapperClass="group-wrapper-class"
+    groupInputClass="group-input-class"
+  />
 </template>
 ```
 
 css :
 
-``` CSS
+```CSS
 <style scoped>
 .vue-otp-input  >>>  .group-wrapper-class {
 	border: solid  3px  green;
@@ -399,21 +419,22 @@ output :
 <img src="https://i.ibb.co/vqpdcrR/Screenshot-2022-08-12-182437.jpg" alt="Screenshot-2022-08-12-182437" border="0">
 
 ---
+
 <h4>Error Message  :</h4>
 
 template :
-``` html
-<template>
-	 <otp-input  
-	 :isValid="false"  errorClass="error-class">
-	 <template #errorMessage> There is an error </template>
-	</otp-input>
-</template>
 
+```html
+<template>
+  <otp-input :isValid="false" errorClass="error-class">
+    <template #errorMessage> There is an error </template>
+  </otp-input>
+</template>
 ```
 
 css :
-``` CSS
+
+```CSS
 <style scoped>
 
 .vue-otp-input  >>>  .error-class {
@@ -423,6 +444,7 @@ css :
 }
 </style>
 ```
+
 output :
 
 <img src="https://i.ibb.co/DG94KdD/Screenshot-2022-08-12-205308.jpg" alt="Screenshot-2022-08-12-205308" border="0">
@@ -433,15 +455,15 @@ output :
 <br/>
 template :
 
-``` html
+```html
 <template>
-	 <otp-input  
-		 activeInputClass="active-input-class">
-	</otp-input>
+  <otp-input activeInputClass="active-input-class"> </otp-input>
 </template>
 ```
+
 css :
-``` CSS
+
+```CSS
 <style scoped>
 
 .vue-otp-input  >>>  .active-input-class {
@@ -458,13 +480,12 @@ output :
 
 or in group mode with `activeWrapperClass` prop :
 
-
 <img src="https://i.ibb.co/7VhVkzR/Screenshot-2022-08-12-220828.jpg" alt="Screenshot-2022-08-12-220828" border="0">
 
 <br/>
 <br/>
 
-##  Contribute
+## Contribute
 
 You can help me and contribute for :
 
@@ -475,4 +496,5 @@ You can help me and contribute for :
 - Better exceptions
 
 ## License
+
 MIT
