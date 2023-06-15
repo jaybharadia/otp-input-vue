@@ -29,8 +29,19 @@
   "dependencies": {
     "@babel/eslint-parser": "^7.18.9",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-demi": "^0.14.1"
   },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "vue": "^2.0.0 || >=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
+
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@vue/cli-plugin-babel": "^5.0.8",
